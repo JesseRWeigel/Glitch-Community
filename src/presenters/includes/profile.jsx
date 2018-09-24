@@ -42,6 +42,7 @@ export const ProjectInfoContainer = ({
     <div className="profile-information">
       {children}
     </div>
+    <div className="project-packages"></div>
   </React.Fragment>
 );
 ProjectInfoContainer.propTypes = {

@@ -171,6 +171,9 @@ const ProjectPage = ({
     <section id="info">
       <InfoContainer>
         <ProjectInfoContainer style={{backgroundImage: `url('${getAvatarUrl(id)}')`}}>
+          <section id="projectFileStatus">
+            <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
+          </section>
           <h1>
             {(isAuthorized ? (
               <EditableField value={domain} placeholder="Name your project"
@@ -200,9 +203,7 @@ const ProjectPage = ({
         />
       </div>
     </section>
-    <section id="projectFileStatus">
-      <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
-    </section>
+
     <section id="readme">
       <ReadmeLoader api={api} domain={domain}/>
     </section>

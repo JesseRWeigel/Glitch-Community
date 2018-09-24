@@ -146,6 +146,13 @@ const InterestingPackageJsonThings = ({data}) => {
   );
 };
 
+// https://api.glitch.com/projects/{projectid}/files/package.json
+const ProjectFileStats = ({api, domain}) => (
+  <DataLoader get={() => api.get(`projects/${domain}/files/package.json`)} renderError={ReadmeError}>
+    {({data}) => <InterestingPackageJsonThings data={data}/>}
+  </DataLoader>
+);
+
 const ProjectPage = ({
   project: {
     description, domain, id, users, teams,

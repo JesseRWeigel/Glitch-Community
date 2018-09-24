@@ -81,6 +81,71 @@ ReadmeLoader.propTypes = {
   domain: PropTypes.string.isRequired,
 };
 
+const InterestingPackageJsonThings = ({data}) => {
+  console.log(data["dependencies"]);
+  const dependenciesArray = Object.keys(data.dependencies);
+  
+  const popularDependenciesWebsites = {
+    "react": "reactjs.org",
+    "babel-core": "babeljs.io",
+    "sqlite3": "www.sqlite.org",
+    "sass": "sass-lang.com",
+    "less": "lesscss.org",
+    "typescript": "www.typescriptlang.org",
+    "webpack": "webpack.js.org",
+    "eslint": "eslint.org",
+    "moment": "momentjs.com",
+    "lodash": "lodash.com",
+    "underscore": "underscorejs.org",
+    "jquery": "jquery.com",
+    "aws-sdk": "aws.amazon.com/tools",
+    "passport": "www.passportjs.org",
+    "mongodb": "www.mongodb.com",
+    "express-handlebars": "handlebarsjs.com",
+    "googleapis": "developers.google.com",
+    "ghost": "ghost.org",
+    
+  };
+
+  const popularDependencies = Object.keys(popularDependenciesWebsites);
+  const popularMatches = dependenciesArray.filter(
+    (dependency) => popularDependencies.includes(dependency)
+  ).map((dependency) => {
+    const hostUrl = popularDependenciesWebsites[dependency];
+    const imgUrl = "https://favicon-fetcher.glitch.me/img/" + hostUrl;
+    return {
+      name: dependency,
+      imgUrl,
+    };
+  });
+       
+  const licenseLogos = {
+    "Apache License Version 2.0":"http://www.apache.org/img/asf_logo.png",
+    "MIT": "https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png",
+    "GPL-3.0": "https://www.gnu.org/graphics/gplv3-127x51.png"
+  };
+  
+  const currentProjectLicenseLogo = licenseLogos[data["license"]];
+  
+  const logoStyle = {
+    width: '20px',
+    float: 'left',
+    padding: '0px 2px'
+  };
+
+  return (
+    <React.Fragment>
+      <ul style={{listStyleType:'none'}} className="logos">
+        {popularMatches.map(({name, imgUrl}) => <li key={name}><img title={name} src={imgUrl} className="logo" style={logoStyle}/></li>)}
+      </ul>
+      <div>
+        License: {data.license}
+        <img alt="License Logo" src={currentProjectLicenseLogo} width="50px"/>
+      </div>
+    </React.Fragment>
+  );
+};
+
 const ProjectPage = ({
   project: {
     description, domain, id, users, teams,

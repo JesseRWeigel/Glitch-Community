@@ -197,6 +197,9 @@ const ProjectPage = ({
         />
       </div>
     </section>
+    <section id="projectFileStatus">
+      <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
+    </section>
     <section id="readme">
       <ReadmeLoader api={api} domain={domain}/>
     </section>

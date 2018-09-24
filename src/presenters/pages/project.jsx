@@ -104,6 +104,9 @@ const InterestingPackageJsonThings = ({data}) => {
     "express-handlebars": "handlebarsjs.com",
     "googleapis": "developers.google.com",
     "ghost": "ghost.org",
+    "bluebird": "bluebirdjs.com",
+    "async": "caolan.github.io/async",
+    "express": "expressjs.com",
     
   };
 

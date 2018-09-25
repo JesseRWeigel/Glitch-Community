@@ -38,11 +38,11 @@ export const ProjectInfoContainer = ({
     <div className="avatar-container">
       <div className="user-avatar" style={style} />
       {buttons}
+      <div className="project-packages">test</div>
     </div>
     <div className="profile-information">
       {children}
     </div>
-    <div className="project-packages"></div>
   </React.Fragment>
 );
 ProjectInfoContainer.propTypes = {

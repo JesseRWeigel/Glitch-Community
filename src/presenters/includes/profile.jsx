@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {ProjectFileStats} from '../pages/project.jsx';
 
 
 // Image Buttons
@@ -38,7 +39,7 @@ export const ProjectInfoContainer = ({
     <div className="avatar-container">
       <div className="user-avatar" style={style} />
       {buttons}
-      <div className="project-packages">test</div>
+      <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
     </div>
     <div className="profile-information">
       {children}

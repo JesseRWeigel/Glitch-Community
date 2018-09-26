@@ -150,7 +150,7 @@ const InterestingPackageJsonThings = ({data}) => {
 };
 
 // https://api.glitch.com/projects/{projectid}/files/package.json
-const ProjectFileStats = ({api, domain}) => (
+export const ProjectFileStats = ({api, domain}) => (
   <DataLoader get={() => api.get(`projects/${domain}/files/package.json`)} renderError={ReadmeError}>
     {({data}) => <InterestingPackageJsonThings data={data}/>}
   </DataLoader>

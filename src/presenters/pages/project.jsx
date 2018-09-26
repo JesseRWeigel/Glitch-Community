@@ -138,12 +138,11 @@ const InterestingPackageJsonThings = ({data}) => {
 
   return (
     <React.Fragment>
-      <ul style={{listStyleType:'none'}} className="logos">
-        {popularMatches.map(({name, imgUrl}) => <li key={name}><img title={name} src={imgUrl} className="logo" style={logoStyle}/></li>)}
+      <ul style={{listStyleType:'none',padding:0+'px'}} className="logos">
+        {popularMatches.map(({name, imgUrl}) => <li key={name}><img alt={name} title={name} src={imgUrl} className="logo" style={logoStyle}/></li>)}
       </ul>
       <div>
-        License: {data.license}
-        <img alt="License Logo" src={currentProjectLicenseLogo} width="50px"/>
+        <img alt={data.license} src={currentProjectLicenseLogo} width="50px"/>
       </div>
     </React.Fragment>
   );

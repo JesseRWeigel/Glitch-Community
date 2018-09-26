@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ProjectFileStats} from '../pages/project.jsx';
+import {DataLoader} from '../includes/loader.jsx';
 
 
 // Image Buttons

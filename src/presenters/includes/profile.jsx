@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ProjectFileStats} from '../pages/project.jsx';
+import {InterestingPackageJsonThings} from '../pages/project.jsx';
 
 
 // Image Buttons
@@ -39,7 +39,8 @@ export const ProjectInfoContainer = ({
     <div className="avatar-container">
       <div className="user-avatar" style={style} />
       {buttons}
-      <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
+      <InterestingPackageJsonThings/>
+      
     </div>
     <div className="profile-information">
       {children}

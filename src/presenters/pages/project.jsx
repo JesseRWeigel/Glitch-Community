@@ -81,7 +81,7 @@ ReadmeLoader.propTypes = {
   domain: PropTypes.string.isRequired,
 };
 
-const InterestingPackageJsonThings = ({data}) => {
+export const InterestingPackageJsonThings = ({data}) => {
   console.log(data["dependencies"]);
   const dependenciesArray = Object.keys(data.dependencies);
   

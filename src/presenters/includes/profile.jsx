@@ -38,8 +38,8 @@ export const ProjectInfoContainer = ({
     <div className="avatar-container">
       <div className="user-avatar" style={style} />
       {buttons}
-      <div className="project-packages">test</div>
     </div>
+    <div className="project-packages">test</div>
     <div className="profile-information">
       {children}
     </div>

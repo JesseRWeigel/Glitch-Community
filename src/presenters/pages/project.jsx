@@ -142,7 +142,7 @@ const InterestingPackageJsonThings = ({data}) => {
               title={name} 
               src={imgUrl} 
               className="logo" 
-              onError={(e) => {e.target.src = 'https://cdn.gomix.com/f6949da2-781d-4fd5-81e6-1fdd56350165%2Fanon-user-on-project-avatar.svg?1488556279399'}}
+              onError={(e) => {e.target.src = 'https://cdn.glitch.com/4d5adefc-986d-4406-8b38-898e95610bc7%2Fnpm.png?1538079784799'}}
             />
           </li>)}
       </ul>

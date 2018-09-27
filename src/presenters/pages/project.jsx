@@ -144,9 +144,15 @@ const InterestingPackageJsonThings = ({data}) => {
   );
 };
 
+const PackageJsonError = (error) => (
+  (error && error.response && error.response.status === 404)
+    ? null
+    : <React.Fragment>{error.response}</React.Fragment>
+);
+
 // https://api.glitch.com/projects/{projectid}/files/package.json
 export const ProjectFileStats = ({api, domain}) => (
-  <DataLoader get={() => api.get(`projects/${domain}/files/package.json`)} renderError={ReadmeError}>
+  <DataLoader get={() => api.get(`projects/${domain}/files/package.json`)} renderError={PackageJsonError}>
     {({data}) => <InterestingPackageJsonThings data={data}/>}
   </DataLoader>
 );

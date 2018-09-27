@@ -87,7 +87,7 @@ const InterestingPackageJsonThings = ({data}) => {
   
   const popularDependenciesWebsites = {
     "react": "reactjs.org",
-    "babel-core": "babeljs.io",
+    "babel-core": "bluebirdjs.com",
     "sqlite3": "www.sqlite.org",
     "sass": "sass-lang.com",
     "less": "lesscss.org",
@@ -135,7 +135,10 @@ const InterestingPackageJsonThings = ({data}) => {
   return (
     <React.Fragment>
       <ul className="logos">
-        {popularMatches.map(({name, imgUrl}) => <li key={name}><img alt={name} title={name} src={imgUrl} className="logo"/></li>)}
+        {popularMatches.map(({name, imgUrl}) => 
+          <li key={name}>
+            <img onError={(e)=>{e.target.onerror = null; e.target.src="image_path_here";}} alt={name} title={name} src={imgUrl} className="logo"/>
+          </li>)}
       </ul>
       <div>
         <img alt={data.license} src={currentProjectLicenseLogo} width="50px"/>

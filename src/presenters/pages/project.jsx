@@ -145,9 +145,9 @@ const InterestingPackageJsonThings = ({data}) => {
 };
 
 const PackageJsonError = (error) => (
-  (error && error.response && error.response.status === 404)
-    ? null //if its a static site, without a project.json file, we don't want to show an error
-    : <React.Fragment>We couldn't load the package file. Try refreshing?</React.Fragment>
+  (error && error.response && !error.response.status === 404)
+    ? <React.Fragment>We couldn't load the package file. Try refreshing?</React.Fragment>
+    : null //if its a site without a project.json file, we don't want to show an error, just ignore
 );
 
 // https://api.glitch.com/projects/{projectid}/files/package.json

@@ -170,9 +170,6 @@ const ProjectPage = ({
     <section id="info">
       <InfoContainer>
         <ProjectInfoContainer style={{backgroundImage: `url('${getAvatarUrl(id)}')`}}>
-          <section id="projectFileStatus" style={{marginLeft:-65+"%",marginTop:-10+"%",maxWidth:60+"%"}}>
-            <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
-          </section>
           <h1>
             {(isAuthorized ? (
               <EditableField value={domain} placeholder="Name your project"
@@ -190,6 +187,9 @@ const ProjectPage = ({
             <ShowButton name={domain}/>
             <EditButton name={domain} isMember={isAuthorized}/>
           </p>
+          <section id="projectFileStatus" style={{marginLeft:-62+"%",marginTop:-10+"%",maxWidth:58+"%"}}>
+            <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
+          </section>
         </ProjectInfoContainer>
       </InfoContainer>
     </section>

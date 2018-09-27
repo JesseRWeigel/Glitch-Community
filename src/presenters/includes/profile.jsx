@@ -39,7 +39,6 @@ export const ProjectInfoContainer = ({
       <div className="user-avatar" style={style} />
       {buttons}
     </div>
-    <div className="project-packages">test</div>
     <div className="profile-information">
       {children}
     </div>

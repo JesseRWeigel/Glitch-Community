@@ -170,7 +170,7 @@ const ProjectPage = ({
     <section id="info">
       <InfoContainer>
         <ProjectInfoContainer style={{backgroundImage: `url('${getAvatarUrl(id)}')`}}>
-          <section id="projectFileStatus">
+          <section id="projectFileStatus" style={{marginLeft:-65+"%",marginTop:-10+"%",maxWidth:60+"%"}}>
             <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
           </section>
           <h1>

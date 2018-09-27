@@ -137,7 +137,7 @@ const InterestingPackageJsonThings = ({data}) => {
       <ul className="logos">
         {popularMatches.map(({name, imgUrl}) => 
           <li key={name}>
-            <img onError={(e)=>{e.target.onerror = null; e.target.src="image_path_here";}} alt={name} title={name} src={imgUrl} className="logo"/>
+            <img alt={name} title={name} src={imgUrl} className="logo"/>
           </li>)}
       </ul>
       <div>

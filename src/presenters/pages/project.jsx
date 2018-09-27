@@ -104,8 +104,8 @@ const InterestingPackageJsonThings = ({data}) => {
     "express-handlebars": "handlebarsjs.com",
     "googleapis": "developers.google.com",
     "ghost": "ghost.org",
-    "bluebird": "bluebirdjs.com",
-    "async": "caolan.github.io/async",
+    //"bluebird": "bluebirdjs.com", 
+    //"async": "caolan.github.io/async", these are both popular but don't work with favicon-fetcher
     "express": "expressjs.com",
     
   };

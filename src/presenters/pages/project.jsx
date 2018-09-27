@@ -187,7 +187,7 @@ const ProjectPage = ({
             <ShowButton name={domain}/>
             <EditButton name={domain} isMember={isAuthorized}/>
           </p>
-          <section id="projectFileStatus" style={{marginLeft:-62+"%",marginTop:-10+"%",maxWidth:58+"%"}}>
+          <section id="projectFileStatus">
             <ProjectFileStats api={api} domain={domain}></ProjectFileStats>
           </section>
         </ProjectInfoContainer>

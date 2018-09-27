@@ -87,7 +87,7 @@ const InterestingPackageJsonThings = ({data}) => {
   
   const popularDependenciesWebsites = {
     "react": "reactjs.org",
-    "babel-core": "bluebirdjs.com",
+    "babel-core": "babeljs.io",
     "sqlite3": "www.sqlite.org",
     "sass": "sass-lang.com",
     "less": "lesscss.org",
@@ -137,7 +137,13 @@ const InterestingPackageJsonThings = ({data}) => {
       <ul className="logos">
         {popularMatches.map(({name, imgUrl}) => 
           <li key={name}>
-            <img alt={name} title={name} src={imgUrl} className="logo"/>
+            <img 
+              alt={name} 
+              title={name} 
+              src={imgUrl} 
+              className="logo" 
+              onError={(e) => {e.target.src = 'https://cdn.gomix.com/f6949da2-781d-4fd5-81e6-1fdd56350165%2Fanon-user-on-project-avatar.svg?1488556279399'}}
+            />
           </li>)}
       </ul>
       <div>

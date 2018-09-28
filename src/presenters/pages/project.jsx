@@ -129,8 +129,6 @@ const InterestingPackageJsonThings = ({data}) => {
   };
   
   const currentProjectLicenseLogo = licenseLogos[data["license"]];
-  console.log(currentProjectLicenseLogo);
-  
 
 
   return (

@@ -146,7 +146,7 @@ const InterestingPackageJsonThings = ({data}) => {
           </li>)}
       </ul>
       <div>
-        <img alt={data.license} src={currentProjectLicenseLogo} width="50px"/>
+        <img className="license-logo" alt={data.license} src={currentProjectLicenseLogo}/>
       </div>
     </React.Fragment>
   );
